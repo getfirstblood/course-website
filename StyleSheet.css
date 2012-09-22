@@ -1,0 +1,312 @@
+﻿/*--------------------------------------大框架--------------------------------------*/
+body
+{
+  margin:0 auto;
+  width:1000px;
+  height:auto;
+  min-height:300px;
+  word-break:break-all;
+  word-wrap:break-word;
+  background:#5c6c7c;
+}
+
+#header
+{
+ width:100%;
+ height:230px;
+ margin:0 0 3px 0;
+ padding:0;
+ background:url(images/Logo2.gif);
+}
+
+#left
+{
+ width:125px;
+ height:auto;
+ left:0;
+ float:left;
+ min-height:460px;
+ padding:10px 0 0 0;
+ margin:0;
+}
+ 
+#right
+{
+   width:875px;
+   height:auto;
+   float:right;
+}
+
+.clear
+{
+ clear:both;
+ width:0;
+ height:0;
+ margin:0;
+ padding:0;
+}
+ 
+#footer
+{
+   width:900px;
+   height:40px;
+   background:url(images/footer1.gif) no-repeat;
+   margin:0 auto;
+   padding:7px;
+}
+
+
+/*-----------------------------------------全局-----------------------------------------*/
+.btcenter
+{
+  width:100px;
+  margin:0 auto;
+}
+
+a
+{
+  color:Blue;
+  text-decoration:none;
+}
+
+.maincontent
+{
+  width:835px;
+  height:auto;
+  margin:0;
+  padding:0;
+}
+
+.hang
+{
+  width:100%;
+  height:auto;
+  margin:0;
+  padding:0;
+}
+
+.fthang
+{
+  height:30px;
+}
+
+.fthang .ftleft
+{
+   width:200px;
+   float:left;
+   font:blue;
+   font-size:smaller;
+   margin:0;
+   padding:0;
+}
+
+.fthang .ftright
+{
+   width:200px;
+   float:right;
+   font:blue;
+   font-size:smaller;
+   margin:0;
+   padding:0;
+}
+/*-----------------------------#B8B8B8-----------header------------------------------------*/
+
+#welcome
+{
+ width:1000px;
+ height:30px;
+ position:relative;
+ left:0px;
+ top:73px;
+ padding:0;
+ font-size:small;
+}
+
+#welcome #wellogin
+{
+ width:500px;
+ float:right;
+}
+
+#welcome #welloged
+{
+  width:500px;
+  float:right;
+  height:30px;
+  margin:0;
+  padding:0;
+}
+
+#welcome #welloged p
+{
+  height:30px;
+  margin:0;
+  padding:0;
+}
+
+#welcome #welloged a
+{
+  font:#ffffff;
+}
+#welcome .welpanel
+{
+  margin:5px 0;
+  padding:0;
+  float:right;
+  position:relative;
+}
+#welcome #welloged #wellogout
+{
+   width:180px;
+   margin:0;
+   padding:0;
+   float:right;
+   height:30px;
+}
+/*----------------------------------------导航--------------------------------------*/
+#left ul
+{
+ list-style:none;
+ text-decoration:none;
+  margin:0;
+  padding:0;
+  vertical-align:middle;
+
+ }
+ 
+#left ul li
+{
+  background:url(images/daohang.gif);
+  text-decoration:none;
+  display:block;
+  list-style:none;
+  height:30px;
+  padding:0;
+  text-align:center;
+  margin:0 0 5px 0;
+  width:100%;
+  vertical-align:middle;
+  line-height:30px;
+ }
+ #left ul li:hover
+  {
+  background:url(images/daohang1.gif);
+ }
+ #subject li.subject,#principle li.principle,#plan li.plan,#info li.inform,
+ #online li.online,#share li.share,#practice li.practice,#askanswer li.askanswer,
+ #score li.score,#changekey li.changekey,#Qmanage li.Qmanage,#Emanage li.Emanage,
+ #correct li.correct,#analysis li.analysis,#TUmanage li.Umanage,#Tmanage li.Tmanage,
+ #Smanage li.Smanage,#Pinform li.Pinform
+ {
+  background:url(images/daohang1.gif);
+ }
+ #left ul li a
+ {
+   text-decoration:none;
+   display:block;
+   color:Blue;
+ }
+/*----------------------------------------------------------------------------*/
+.wizardstep
+{
+ width:100%;
+ margin:0;
+ padding:0;
+}
+
+
+
+.textboxa
+{
+  width:80%;
+  height:20px;
+  margin:0 0;
+  padding:0; 
+ }
+ 
+ .textboxb
+ {
+   width:90%;
+   height:80px;
+   margin:0;
+   padding:0;
+ }
+/*------------------------------------圆角-----------------------------------*/  
+div.RoundedCorner
+{
+ background: #FFF;
+}
+
+.textbody
+{
+  width:835px;
+  margin:0;
+  padding:10px 20px;
+  min-height:450px;
+  height:auto;
+}
+b.rtop, b.rbottom{display:block;background: #5c6c7c}
+b.rtop b, b.rbottom b{display:block;height: 1px;overflow: hidden; background: #FFF}
+b.r1{margin: 0 5px}
+b.r2{margin: 0 3px}
+b.r3{margin: 0 2px}
+b.rtop b.r4, b.rbottom b.r4{margin: 0 1px;height: 2px}
+/*----------------------------------------------------------------------------*/
+.style1
+{
+  width:100px;
+  }
+  
+.style2
+{
+  width:200px;
+  }
+  
+.edit
+{
+  margin:0 310px;
+}
+
+.editor
+{
+  margin:0;
+}
+
+.floatright
+{
+  float:right;
+}
+
+.btedit
+{
+  position:relative;
+  top:0px;
+  left:750px;
+}
+
+
+/*----------------------------------reply------------------------------------*/
+#reply .formview
+{
+   width:835px;
+   height:auto;
+   margin:10px 0;
+   padding:0;
+}
+
+#reply .formview .asktable
+{
+   width:815px;
+   height:auto;
+   margin:0 auto;
+   padding:0 0 3px 0;
+}
+
+#reply .gridview
+{
+   width:835px;
+   height:auto;
+   margin:10px 0;
+   padding:0;
+   font-size:small;
+}

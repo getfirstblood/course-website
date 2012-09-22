@@ -1,0 +1,139 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>无标题页</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+      <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server" EnableScriptGlobalization="true" EnableScriptLocalization="true">
+
+        <Services>
+         <asp:ServiceReference Path="~/WebService.asmx" />
+        </Services>
+
+      </asp:ToolkitScriptManager>
+      
+     <div id="header">
+               <div id="welcome">
+               <script type="text/javascript">
+//                  var Sys = {};
+//                  var ua = navigator.userAgent.toLowerCase();
+//                  window.ActiveXObject ? Sys.ie = ua.match(/msie ([\d.]+)/)[1] :
+//                  document.getBoxObjectFor ? Sys.firefox = ua.match(/firefox\/([\d.]+)/)[1] :
+//                  window.MessageEvent && !document.getBoxObjectFor ? Sys.chrome = ua.match(/chrome\/([\d.]+)/)[1] :
+//                  window.opera ? Sys.opera = ua.match(/opera.([\d.]+)/)[1] :
+//                  window.openDatabase ? Sys.safari = ua.match(/version\/([\d.]+)/)[1] : 0;
+                  window.setInterval("getwelcome()",100000);
+                  function pageLoad()
+                  {
+                     getwelcome();
+                   }
+                  function getwelcome()
+                  {
+                     WebService.GetWelcome(dealwelcome);
+                   }
+           
+                  function dealwelcome(result)
+                  {
+                     if(result._role=='Student')
+                     {
+                        $get('<%=lbSExam.ClientID %>').innerHTML=result._exam;
+                        $get('<%=lbSInform.ClientID %>').innerHTML=result._inform;
+                      }
+                     else if(result._role=='Teacher')
+                     {
+                        $get('<%=lbTMem.ClientID %>').innerHTML=result._member;
+                        $get('<%=lbTTopic.ClientID %>').innerHTML=result._topic;
+                        $get('<%=lbTCorrect.ClientID %>').innerHTML=result._correct;
+                        $get('<%=lbTInform.ClientID %>').innerHTML=result._inform;
+                      }
+                     else if(result._role=='Admin')
+                     {
+                        $get('<%=lbAMem.ClientID %>').innerHTML=result._member;
+                      }              
+                   }
+                   window.onscroll=function ()
+                   {
+                      if(document.documentElement.scrollTop+document.body.scrollTop>200)
+                      {
+                         $get('left').style.position='fixed';
+                         $get('left').style.top='30px';
+                         var left=(document.documentElement.clientWidth-1000)/2
+                         $get('left').style.left=left+'px';
+                         $get('left').style.float='none';
+                      }
+                      if(document.documentElement.scrollTop+document.body.scrollTop<200)
+                      {
+                         $get('left').style.position='relative';
+                         $get('left').style.top='0px';
+                         $get('left').style.left='0px';
+                         $get('left').style.float='left';
+                      }
+                   }
+               </script>
+               <asp:Panel runat="server" ID="after">
+                  <div id="welloged">
+                  <div id="wellogout">
+                   欢迎您，<asp:Label ID="lbUser" runat="server" Text=""/><asp:Button ID="Button1" runat="server" onclick="Button1_Click" Text="退出" 
+                       CssClass="btlgout" Font-Size="Small" />
+                   </div>    
+                   <asp:Panel runat="server" ID="welStu" Width="180px" CssClass="welpanel">
+                     新考试：<asp:HyperLink ID="lbSExam" ForeColor="White" runat="server" NavigateUrl="~/Student/practiceonline.aspx"></asp:HyperLink>
+                     新通知：<asp:HyperLink ID="lbSInform" ForeColor="White" runat="server" NavigateUrl="~/Inform.aspx"></asp:HyperLink>
+                   </asp:Panel>
+                   <asp:Panel runat="server" ID="welTea" Width="310px" CssClass="welpanel">
+                     待审核成员：<asp:HyperLink ID="lbTMem" runat="server" ForeColor="White" NavigateUrl="~/Teacher/usermanage.aspx"></asp:HyperLink>
+                     新主题：<asp:HyperLink ID="lbTTopic" runat="server" ForeColor="White" NavigateUrl="~/Student/askandanser.aspx"></asp:HyperLink>新通知：<asp:HyperLink ID="lbTInform" ForeColor="White" runat="server" NavigateUrl="~/inform.aspx"></asp:HyperLink>
+                     待批阅题目：<asp:HyperLink ID="lbTCorrect" ForeColor="White" runat="server" NavigateUrl="~/Teacher/CorrectOnline.aspx"></asp:HyperLink>
+                   </asp:Panel>
+                   <asp:Panel runat="server" ID="welAdm" Width="80px" CssClass="welpanel">
+                     待审核成员：<asp:HyperLink ID="lbAMem" runat="server" ForeColor="White" NavigateUrl="~/Teacher/usermanage.aspx"></asp:HyperLink>
+                   </asp:Panel> </div>
+               </asp:Panel>
+               <asp:Panel ID="before" runat="server">
+                 <div id="wellogin">
+                   用户名：<asp:TextBox ID="TextBox1" runat="server" Width="100px"></asp:TextBox> 
+                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ControlToValidate="TextBox1" runat="server" ErrorMessage="*" ValidationGroup="wellogin"></asp:RequiredFieldValidator>&nbsp;&nbsp;密码：<asp:TextBox ID="TextBox2" runat="server" TextMode="Password" Width="100px"></asp:TextBox><asp:RequiredFieldValidator
+                         ID="RequiredFieldValidator2" runat="server" ErrorMessage="*" ControlToValidate="TextBox2" ValidationGroup="wellogin"></asp:RequiredFieldValidator>&nbsp;&nbsp;<asp:Button
+                       ID="Button2" runat="server" Text="登录" OnClick="button2_click" ValidationGroup="wellogin"/>
+                      &nbsp;&nbsp;
+                   <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/CreateUser.aspx" 
+                     ForeColor="Blue">注册</asp:HyperLink></div>
+               </asp:Panel>       
+             </div>              
+     </div>
+     
+           <div id="left">
+             
+            <asp:ContentPlaceHolder ID="daohang" runat="server">
+            </asp:ContentPlaceHolder>
+              
+           </div>
+           <div id="right">
+             <div class="RoundedCorner">
+               <b class="rtop"><b class="r1"></b><b class="r2"></b><b class="r3"></b><b class="r4"></b></b>
+                <div class="textbody">
+                 <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                 </asp:ContentPlaceHolder>
+                </div>
+               <b class="rbottom"><b class="r4"></b><b class="r3"></b><b class="r2"></b><b class="r1"></b></b>
+             </div>
+           </div>
+   
+    <div class="clear"></div>
+    <div id="footer">
+      <div id="footer1">
+         <p style="font-size:small;color:#FFFFFF;width:380px;margin:10px auto;">Copyright © 2010-2012 All Rights Reserved 江苏科技大学 版权所有</p>
+      </div>
+    </div>
+    </form>
+</body>
+</html>

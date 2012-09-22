@@ -1,0 +1,57 @@
+<xml xmlns:v="urn:schemas-microsoft-com:vml"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:p="urn:schemas-microsoft-com:office:powerpoint"
+ xmlns:oa="urn:schemas-microsoft-com:office:activation">
+ <p:presentation sizeof="screen" gridspacingx="46448" gridspacingy="46448"
+  savewithfonts="t" subsetembed="1">
+  <p:master id="3" slidesn="1C9A7C6,E8ED5180" type="main" href="master03.html"
+   xmlhref="master03.xml" template="默认设计模板" layout="title_body"
+   slots="title,body,dateTime,footer,slideNumber">
+   <p:schemes>
+   </p:schemes>
+  </p:master>
+  <p:master id="5" slidesn="1C8F5E5,ABF141D0" type="main" href="master05.html"
+   xmlhref="master05.xml" template="NordriDesign" preserved="t"
+   layout="title_body" slots="title,body,dateTime,footer,slideNumber">
+   <p:schemes>
+   </p:schemes>
+  </p:master>
+  <p:master id="96" slidesn="1C9A7C6,E8ED5180" type="main" href="master96.html"
+   xmlhref="master96.xml" template="1_默认设计模板" layout="title_body"
+   slots="title,body,dateTime,footer,slideNumber">
+   <p:schemes>
+   </p:schemes>
+  </p:master>
+  <p:master id="2" slidesn="1C9A88F,7E566270" type="handout"
+   href="master02.html" layout="handout"
+   slots="header,dateTime,footer,slideNumber"/>
+  <p:slide id="8" slidesn="1C9A7C6,E8ED5180" href="slide0008.html"
+   masterhref="master96.html"/>
+  <p:slide id="6" slidesn="1C8F5EC,7A23C270" href="slide0006.html"/>
+  <p:slide id="9" slidesn="1CACA75,2027BCE0" href="slide0009.html"/>
+  <p:slide id="10" slidesn="1CACA7F,BB57C7F0" href="slide0010.html"/>
+  <p:slide id="11" slidesn="1CACA80,2079D380" href="slide0011.html"/>
+  <p:slide id="12" slidesn="1CACA80,96586300" href="slide0012.html"/>
+  <p:slide id="13" slidesn="1CACA81,1DCDD0E0" href="slide0013.html"/>
+  <p:slide id="14" slidesn="1CACA81,A9562EF0" href="slide0014.html"/>
+  <p:slide id="3" slidesn="1C9A7C6,EAD858A0" href="slide0003.html"/>
+  <p:viewstate type="slideView" scale="75" restoredleft="156" restoredtop="946"
+   vertbarstate="2" hideoutlineicons="t"/>
+  <p:guide type="horizontal" position="4319"/>
+  <p:guide type="vertical" position="295"/>
+  <p:guide type="vertical" position="5420"/>
+  <p:font name="Arial" charset="0" type="4"/>
+  <p:font name="华文细黑" charset="134" type="4" family="2"/>
+  <p:font name="黑体" charset="134" type="4" family="2"/>
+  <p:font name="Calibri" charset="0" type="4" family="34"/>
+  <p:font name="宋体" charset="134" type="4"/>
+  <p:headersfooters nouserdate="t" nofooter="t" noheader="t" nodate="t"
+   todaydate="t"/>
+  <p:headersfooters notes="t" nouserdate="t" nofooter="t" noheader="t"
+   nodate="t" todaydate="t"/>
+  <p:pptdocumentsettings framecolors="WhiteTextOnBlack" hideslideanimation="t"
+   browsersupport="v4"/>
+ </p:presentation>
+ <o:shapedefaults v:ext="edit" spidmax="13318">
+  <o:colormru v:ext="edit" colors="#333,#ddd,#fc0,#900,black"/>
+ </o:shapedefaults></xml>
